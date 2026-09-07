@@ -7,6 +7,7 @@
     <meta name="description" content="CanteenIQ — ML-powered canteen food demand forecasting and intelligence platform.">
     <title>CanteenIQ — Demand Intelligence</title>
 
+<<<<<<< HEAD
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +15,1438 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+=======
+    <title>CanteenIQ | Demand Intelligence</title>
+
+    <style>
+        :root {
+            --ink: #10231d;
+            --muted: #68746f;
+            --soft: #eef3ef;
+            --line: #dce4df;
+            --paper: #f7f8f5;
+            --white: #ffffff;
+            --green: #075c45;
+            --green-dark: #043f30;
+            --green-light: #dfece6;
+            --lime: #b9d94c;
+            --danger: #a23b3b;
+            --shadow: 0 20px 60px rgba(16, 35, 29, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Arial, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 76px;
+            background: rgba(247, 248, 245, 0.96);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            max-width: 1240px;
+            height: 100%;
+            margin: auto;
+            padding: 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            background: var(--green);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .logo-text span {
+            display: block;
+            margin-top: 2px;
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-links a {
+            color: #53615b;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .github-btn {
+            padding: 11px 17px;
+            border-radius: 9px;
+            background: var(--ink);
+            color: white !important;
+            font-size: 12px !important;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            background: var(--green);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 620px;
+            height: 620px;
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 50%;
+            right: -230px;
+            top: -300px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 50%;
+            right: -70px;
+            bottom: -300px;
+        }
+
+        .hero-inner {
+            max-width: 1240px;
+            margin: auto;
+            padding: 82px 28px 74px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border: 1px solid rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.07);
+            border-radius: 100px;
+            color: #d8e9e1;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--lime);
+        }
+
+        .hero h1 {
+            max-width: 690px;
+            margin: 24px 0 20px;
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            font-weight: 760;
+        }
+
+        .hero h1 span {
+            color: #bfe1d2;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 0;
+            color: #c4d9d0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .hero-primary {
+            border: 0;
+            padding: 15px 21px;
+            border-radius: 10px;
+            background: white;
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        .hero-secondary {
+            padding: 15px 21px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: transparent;
+            color: white;
+            font-weight: 700;
+        }
+
+        /* =========================
+           HERO CARD
+        ========================== */
+
+        .hero-card {
+            border-radius: 22px;
+            padding: 26px;
+            background: rgba(255,255,255,0.075);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-card-top {
+            display: flex;
+            justify-content: space-between;
+            color: #9fc5b5;
+            font-size: 10px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .hero-status {
+            color: #c8df51;
+        }
+
+        .hero-number {
+            margin-top: 38px;
+            font-size: 62px;
+            line-height: 1;
+            font-weight: 750;
+            letter-spacing: -3px;
+        }
+
+        .hero-unit {
+            color: #a9c7bb;
+            margin-top: 7px;
+            font-size: 12px;
+        }
+
+        .hero-food {
+            margin-top: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero-food strong {
+            font-size: 15px;
+        }
+
+        .hero-food span {
+            color: #9fc5b5;
+            font-size: 11px;
+        }
+
+        .mini-chart {
+            height: 95px;
+            margin-top: 28px;
+            display: flex;
+            align-items: end;
+            gap: 9px;
+        }
+
+        .bar {
+            flex: 1;
+            border-radius: 6px 6px 2px 2px;
+            background: rgba(190,225,210,0.28);
+        }
+
+        .bar:nth-child(1) { height: 31%; }
+        .bar:nth-child(2) { height: 47%; }
+        .bar:nth-child(3) { height: 38%; }
+        .bar:nth-child(4) { height: 64%; }
+        .bar:nth-child(5) { height: 54%; }
+        .bar:nth-child(6) { height: 78%; }
+        .bar:nth-child(7) { height: 92%; }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            max-width: 1240px;
+            margin: auto;
+            padding: 0 28px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            margin-top: -32px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .stat {
+            padding: 25px 28px;
+            border-right: 1px solid var(--line);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat-value {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        .main {
+            max-width: 1240px;
+            margin: auto;
+            padding: 92px 28px;
+        }
+
+        .section-intro {
+            max-width: 680px;
+            margin-bottom: 38px;
+        }
+
+        .section-tag {
+            color: var(--green);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-intro h2 {
+            margin: 12px 0;
+            font-size: clamp(30px, 4vw, 45px);
+            letter-spacing: -2px;
+            line-height: 1.05;
+        }
+
+        .section-intro p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* =========================
+           WORKSPACE
+        ========================== */
+
+        .workspace {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+            gap: 22px;
+            align-items: start;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(16,35,29,0.045);
+        }
+
+        .form-panel {
+            padding: 34px;
+        }
+
+        .panel-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 22px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 30px;
+        }
+
+        .panel-heading h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .step {
+            color: var(--muted);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+        }
+
+        .form-section {
+            margin-bottom: 34px;
+        }
+
+        .form-section-title {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+        }
+
+        .form-section-number {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background: var(--green-light);
+            color: var(--green);
+            display: grid;
+            place-items: center;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .form-section-title strong {
+            font-size: 14px;
+        }
+
+        .field-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px;
+        }
+
+        .field {
+            min-width: 0;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #485650;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+        }
+
+        input,
+        select {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #d5ddd8;
+            border-radius: 10px;
+            background: #fbfcfa;
+            color: var(--ink);
+            padding: 0 14px;
+            outline: none;
+            transition: 0.18s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: var(--green);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(7,92,69,0.08);
+        }
+
+        input:disabled,
+        select:disabled {
+            background: #f0f3f0;
+            color: #6c7772;
+        }
+
+        .field-note {
+            margin-top: 7px;
+            color: #89938e;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           WEEKEND
+        ========================== */
+
+        .weekend-status {
+            min-height: 48px;
+            border: 1px solid #d5ddd8;
+            border-radius: 10px;
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f7faf7;
+        }
+
+        .weekend-main {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .weekend-indicator {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #9aa59f;
+        }
+
+        .weekend-status.is-weekend .weekend-indicator {
+            background: var(--green);
+            box-shadow: 0 0 0 5px var(--green-light);
+        }
+
+        .weekend-status small {
+            color: #89938e;
+            font-size: 9px;
+        }
+
+        /* =========================
+           TOGGLES
+        ========================== */
+
+        .toggle-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .toggle-option {
+            position: relative;
+        }
+
+        .toggle-option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .toggle-option label {
+            height: 48px;
+            margin: 0;
+            border: 1px solid #d5ddd8;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            background: #fbfcfa;
+            color: #66716c;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .toggle-option input:checked + label {
+            border-color: var(--green);
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        /* =========================
+           FOOD
+        ========================== */
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .food-option {
+            position: relative;
+        }
+
+        .food-option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .food-option label {
+            min-height: 88px;
+            margin: 0;
+            padding: 12px 7px;
+            border: 1px solid #d5ddd8;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            cursor: pointer;
+            background: white;
+            color: #293631;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            transition: 0.18s ease;
+        }
+
+        .food-option label:hover {
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        .food-option input:checked + label {
+            border-color: var(--green);
+            background: var(--green-light);
+            color: var(--green);
+            box-shadow: inset 0 0 0 1px var(--green);
+        }
+
+        .food-icon {
+            font-size: 25px;
+        }
+
+        /* =========================
+           ACTIONS
+        ========================== */
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            padding-top: 25px;
+            border-top: 1px solid var(--line);
+        }
+
+        .predict-btn {
+            flex: 1;
+            min-height: 51px;
+            border: 0;
+            border-radius: 10px;
+            background: var(--green);
+            color: white;
+            font-weight: 800;
+        }
+
+        .predict-btn:hover {
+            background: var(--green-dark);
+        }
+
+        .predict-btn:disabled {
+            opacity: 0.65;
+            cursor: wait;
+        }
+
+        .reset-btn {
+            min-width: 100px;
+            border: 1px solid #d5ddd8;
+            border-radius: 10px;
+            background: white;
+            color: #52605a;
+            font-weight: 700;
+        }
+
+        /* =========================
+           RESULT
+        ========================== */
+
+        .result-panel {
+            padding: 27px;
+            position: sticky;
+            top: 96px;
+        }
+
+        .result-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .result-top h3 {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .result-status {
+            padding: 7px 10px;
+            border-radius: 100px;
+            background: #edf0ed;
+            color: #6b756f;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .result-status.success {
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        .result-empty {
+            min-height: 270px;
+            border: 1px dashed #ccd6d0;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 30px;
+            color: #89938e;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .empty-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .current-result {
+            display: none;
+        }
+
+        .forecast-box {
+            border-radius: 15px;
+            padding: 27px 20px;
+            background: var(--green);
+            color: white;
+            text-align: center;
+        }
+
+        .forecast-label {
+            color: #b6d0c5;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .forecast-number {
+            margin-top: 13px;
+            font-size: 55px;
+            line-height: 1;
+            font-weight: 800;
+        }
+
+        .forecast-unit {
+            margin-top: 8px;
+            color: #b6d0c5;
+            font-size: 11px;
+        }
+
+        .forecast-food {
+            margin-top: 19px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .summary {
+            margin-top: 22px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 11px 0;
+            border-bottom: 1px solid #edf0ee;
+            font-size: 11px;
+        }
+
+        .summary-row span:first-child {
+            color: #89938e;
+        }
+
+        .summary-row span:last-child {
+            color: #26342e;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        /* =========================
+           HISTORY
+        ========================== */
+
+        .history {
+            margin-top: 27px;
+            padding-top: 23px;
+            border-top: 1px solid var(--line);
+        }
+
+        .history-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 13px;
+        }
+
+        .history-head strong {
+            font-size: 13px;
+        }
+
+        .clear-history {
+            border: 0;
+            background: none;
+            color: #8b9690;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .history-item {
+            padding: 11px;
+            border: 1px solid #e1e7e3;
+            border-radius: 9px;
+            background: #fbfcfa;
+        }
+
+        .history-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .history-food {
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .history-demand {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .history-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 5px;
+            color: #909a95;
+            font-size: 9px;
+        }
+
+        .history-empty {
+            color: #929c97;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* =========================
+           ERROR
+        ========================== */
+
+        .error-box {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 9px;
+            background: #fff3f3;
+            border: 1px solid #f0cccc;
+            color: var(--danger);
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           MODEL
+        ========================== */
+
+        .model-section {
+            margin-top: 100px;
+            padding: 65px;
+            border-radius: 24px;
+            background: var(--green);
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .model-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .model-copy .section-tag {
+            color: #bcd9cc;
+        }
+
+        .model-copy h2 {
+            margin: 12px 0 18px;
+            font-size: 43px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .model-copy p {
+            max-width: 510px;
+            color: #bdd5ca;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 25px;
+        }
+
+        .tech {
+            padding: 7px 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 100px;
+            color: #d2e3dc;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .performance-card {
+            position: relative;
+            z-index: 2;
+            padding: 29px;
+            border-radius: 17px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.13);
+        }
+
+        .performance-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .performance-head span {
+            color: #a9c7bb;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .model-badge {
+            padding: 6px 8px;
+            border-radius: 100px;
+            background: rgba(190,225,210,0.12);
+            color: #d0e8de !important;
+        }
+
+        .metric {
+            margin-bottom: 22px;
+        }
+
+        .metric-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .metric-top span:first-child {
+            color: #c0d7ce;
+            font-size: 11px;
+        }
+
+        .metric-top strong {
+            font-size: 14px;
+        }
+
+        .metric-bar {
+            height: 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .metric-fill {
+            height: 100%;
+            width: 97%;
+            background: #c3dc54;
+            border-radius: inherit;
+        }
+
+        .performance-note {
+            margin: 25px 0 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            color: #a9c7bb;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           FEATURES
+        ========================== */
+
+        .features {
+            padding-top: 100px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .feature {
+            padding: 27px;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            background: white;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: var(--green-light);
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+            font-size: 19px;
+        }
+
+        .feature h3 {
+            margin: 0 0 9px;
+            font-size: 15px;
+        }
+
+        .feature p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-section {
+            padding-top: 105px;
+        }
+
+        .about-box {
+            padding: 55px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: white;
+        }
+
+        .about-text {
+            max-width: 850px;
+        }
+
+        .about-text h2 {
+            margin: 12px 0 18px;
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1;
+            letter-spacing: -2.5px;
+        }
+
+        .about-text p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .team-title {
+            margin-top: 45px;
+            margin-bottom: 18px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--green);
+            text-transform: uppercase;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .team-card {
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fbfcfa;
+        }
+
+        .team-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: var(--green-light);
+            color: var(--green);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .team-card p {
+            margin: 5px 0 14px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        .team-card a {
+            display: inline-block;
+            color: var(--green);
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .team-card a:hover {
+            text-decoration: underline;
+        }
+
+        .team-card.disabled {
+            opacity: 0.72;
+        }
+
+        .team-card.disabled a {
+            color: #89938e;
+            pointer-events: none;
+        }
+
+        .repo-box {
+            margin-top: 25px;
+            padding: 22px;
+            border-radius: 14px;
+            background: var(--green);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .repo-box strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .repo-box span {
+            display: block;
+            margin-top: 5px;
+            color: #bdd5ca;
+            font-size: 10px;
+        }
+
+        .repo-box a {
+            flex-shrink: 0;
+            padding: 11px 16px;
+            border-radius: 9px;
+            background: white;
+            color: var(--green);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            margin-top: 100px;
+            border-top: 1px solid var(--line);
+            background: white;
+        }
+
+        .footer-inner {
+            max-width: 1240px;
+            margin: auto;
+            padding: 35px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 500;
+        }
+
+        .footer-right {
+            color: #7c8781;
+            font-size: 10px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 950px) {
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero-card {
+                max-width: 600px;
+            }
+
+            .workspace {
+                grid-template-columns: 1fr;
+            }
+
+            .result-panel {
+                position: static;
+            }
+
+            .model-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 45px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                height: 68px;
+            }
+
+            .nav-inner {
+                padding: 0 16px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-inner {
+                padding: 58px 18px 55px;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+                letter-spacing: -2.4px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .stats {
+                padding: 0 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                margin-top: -20px;
+            }
+
+            .stat {
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+
+            .main {
+                padding: 65px 16px;
+            }
+
+            .form-panel,
+            .result-panel {
+                padding: 22px;
+            }
+
+            .field-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .model-section {
+                margin-top: 70px;
+                padding: 30px 22px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 30px 22px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .repo-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-inner {
+                padding: 28px 18px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .logo-text span {
+                display: none;
+            }
+
+            .github-btn {
+                padding: 9px 11px;
+            }
+
+            .hero h1 {
+                font-size: 41px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-primary,
+            .hero-secondary {
+                width: 100%;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .reset-btn {
+                min-height: 48px;
+            }
+        }
+    </style>
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <!-- =========================================================
          UNIVERSAL NAVBAR
     ========================================================= -->
@@ -130,10 +1559,49 @@
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
+=======
+    <!-- =========================
+         UNIVERSAL HEADER
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-inner">
+
+            <a href="#top" class="logo">
+
+                <div class="logo-mark">
+                    CI
                 </div>
+
+                <div class="logo-text">
+                    <strong>CanteenIQ</strong>
+                    <span>Demand Intelligence</span>
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
+                </div>
+
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#forecast">Forecast</a>
+                <a href="#model">Model</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+
+                <a
+                    class="github-btn"
+                    href="https://github.com/shreyapandey826/samatrix_hackathon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
+
             </div>
 
         </div>
+<<<<<<< HEAD
     </section>
 
 
@@ -158,6 +1626,153 @@
             </div>
         </div>
     </div>
+=======
+
+    </nav>
+
+
+    <div id="top"></div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <div>
+
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    Machine Learning · Canteen Planning
+                </div>
+
+                <h1>
+                    Predict demand.
+                    <span>Prepare smarter.</span>
+                </h1>
+
+                <p class="hero-description">
+                    CanteenIQ estimates daily food demand using calendar,
+                    weather, special-day and recent demand signals —
+                    helping canteen teams prepare closer to what students
+                    are actually likely to consume.
+                </p>
+
+                <div class="hero-actions">
+
+                    <button
+                        class="hero-primary"
+                        onclick="document.getElementById('forecast').scrollIntoView({behavior:'smooth'})"
+                    >
+                        Start Forecast →
+                    </button>
+
+                    <button
+                        class="hero-secondary"
+                        onclick="document.getElementById('model').scrollIntoView({behavior:'smooth'})"
+                    >
+                        Explore Model
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-top">
+                    <span>Demand Snapshot</span>
+
+                    <span class="hero-status">
+                        ● SYSTEM READY
+                    </span>
+                </div>
+
+                <div class="hero-number" id="heroNumber">
+                    --
+                </div>
+
+                <div class="hero-unit">
+                    units · latest forecast
+                </div>
+
+                <div class="hero-food">
+
+                    <strong id="heroFood">
+                        Awaiting prediction
+                    </strong>
+
+                    <span id="heroDate">
+                        Select inputs below
+                    </span>
+
+                </div>
+
+                <div class="mini-chart">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <div class="stats">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <div class="stat-value">0.97</div>
+                <div class="stat-label">R² model score</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Food categories</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-value">API</div>
+                <div class="stat-label">Real-time inference</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main" id="forecast">
+
+        <div class="section-intro">
+
+            <div class="section-tag">
+                Forecast workspace
+            </div>
+
+            <h2>
+                Build today's demand forecast.
+            </h2>
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
 
 
     <!-- =========================================================
@@ -179,13 +1794,20 @@
             </p>
         </div>
 
+<<<<<<< HEAD
         <div class="workspace">
+=======
+
+        <div class="workspace">
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
 
             <!-- =========================
                  FORM PANEL
             ========================== -->
             <div class="panel form-panel">
 
+<<<<<<< HEAD
                 <div class="panel-heading">
                     <h3>Forecast inputs</h3>
                     <span class="step">
@@ -202,19 +1824,73 @@
                             <strong>Calendar & Weather</strong>
                         </div>
 
+=======
+            <div class="panel form-panel">
+
+                <div class="panel-heading">
+
+                    <h3>
+                        Forecast inputs
+                    </h3>
+
+                    <span class="step">
+                        STEP 01 / INPUT
+                    </span>
+
+                </div>
+
+
+                <form id="predictionForm">
+
+
+                    <!-- CALENDAR -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span class="form-section-number">
+                                01
+                            </span>
+
+                            <strong>
+                                Calendar & Weather
+                            </strong>
+
+                        </div>
+
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         <div class="field-grid">
 
                             <div class="field full">
                                 <label for="date">Date</label>
                                 <input type="date" id="date" required>
                                 <div class="field-note">
+<<<<<<< HEAD
                                     Day, month and weekend status are calculated automatically from the selected date.
+=======
+                                    Day, month and weekend status are calculated
+                                    automatically from the selected date.
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                 </div>
                             </div>
 
                             <div class="field">
+<<<<<<< HEAD
                                 <label for="day_of_week">Day of Week</label>
                                 <select id="day_of_week" disabled>
+=======
+
+                                <label for="day_of_week">
+                                    Day of Week
+                                </label>
+
+                                <select
+                                    id="day_of_week"
+                                    disabled
+                                >
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                     <option value="0">Monday</option>
                                     <option value="1">Tuesday</option>
                                     <option value="2">Wednesday</option>
@@ -231,7 +1907,15 @@
                             </div>
 
                             <div class="field">
+<<<<<<< HEAD
                                 <label for="temperature">Temperature °C</label>
+=======
+
+                                <label for="temperature">
+                                    Temperature °C
+                                </label>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                 <input
                                     type="number"
                                     step="any"
@@ -239,6 +1923,10 @@
                                     placeholder="e.g. 30"
                                     required
                                 >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                             </div>
 
                             <div class="field">
@@ -253,6 +1941,41 @@
                                 >
                                 <div class="field-note">
                                     Enter rainfall amount used by the model.
+<<<<<<< HEAD
+=======
+                                </div>
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Weekend Status
+                                </label>
+
+                                <div
+                                    class="weekend-status"
+                                    id="weekendStatus"
+                                >
+
+                                    <div class="weekend-main">
+
+                                        <span
+                                            class="weekend-indicator"
+                                        ></span>
+
+                                        <span id="weekendText">
+                                            Weekday
+                                        </span>
+
+                                    </div>
+
+                                    <small>
+                                        Auto-detected from date
+                                    </small>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                 </div>
                             </div>
 
@@ -271,20 +1994,55 @@
                     </div>
 
 
+<<<<<<< HEAD
                     <!-- SECTION 02: SPECIAL CONDITIONS -->
                     <div class="form-section">
                         <div class="form-section-title">
                             <span class="form-section-number">02</span>
                             <strong>Special Conditions</strong>
+=======
+                    <!-- SPECIAL CONDITIONS -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span class="form-section-number">
+                                02
+                            </span>
+
+                            <strong>
+                                Special Conditions
+                            </strong>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         </div>
 
                         <div class="field-grid">
 
+<<<<<<< HEAD
                             <!-- EXAM DAY -->
                             <div class="field">
                                 <label>Exam Day</label>
                                 <div class="toggle-grid">
                                     <div class="toggle-option">
+=======
+                        <div class="field-grid">
+
+
+                            <!-- EXAM -->
+
+                            <div class="field">
+
+                                <label>
+                                    Exam Day
+                                </label>
+
+                                <div class="toggle-grid">
+
+                                    <div class="toggle-option">
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                         <input
                                             type="radio"
                                             name="exam"
@@ -292,10 +2050,22 @@
                                             value="0"
                                             checked
                                         >
+<<<<<<< HEAD
                                         <label for="examNo">NO</label>
                                     </div>
 
                                     <div class="toggle-option">
+=======
+
+                                        <label for="examNo">
+                                            NO
+                                        </label>
+
+                                    </div>
+
+                                    <div class="toggle-option">
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                         <input
                                             type="radio"
                                             name="exam"
@@ -307,6 +2077,7 @@
                                 </div>
                             </div>
 
+<<<<<<< HEAD
                             <!-- FESTIVAL -->
                             <div class="field">
                                 <label>Festival</label>
@@ -320,6 +2091,12 @@
                                             checked
                                         >
                                         <label for="festivalNo">NO</label>
+=======
+                                        <label for="examYes">
+                                            YES
+                                        </label>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                                     </div>
 
                                     <div class="toggle-option">
@@ -332,21 +2109,96 @@
                                         <label for="festivalYes">YES</label>
                                     </div>
                                 </div>
+<<<<<<< HEAD
+=======
+
+                            </div>
+
+
+                            <!-- FESTIVAL -->
+
+                            <div class="field">
+
+                                <label>
+                                    Festival
+                                </label>
+
+                                <div class="toggle-grid">
+
+                                    <div class="toggle-option">
+
+                                        <input
+                                            type="radio"
+                                            name="festival"
+                                            id="festivalNo"
+                                            value="0"
+                                            checked
+                                        >
+
+                                        <label for="festivalNo">
+                                            NO
+                                        </label>
+
+                                    </div>
+
+                                    <div class="toggle-option">
+
+                                        <input
+                                            type="radio"
+                                            name="festival"
+                                            id="festivalYes"
+                                            value="1"
+                                        >
+
+                                        <label for="festivalYes">
+                                            YES
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                             </div>
 
                         </div>
                     </div>
 
 
+<<<<<<< HEAD
                     <!-- SECTION 03: HISTORICAL SIGNAL -->
                     <div class="form-section">
                         <div class="form-section-title">
                             <span class="form-section-number">03</span>
                             <strong>Historical Signal</strong>
+=======
+                    <!-- PREVIOUS DEMAND -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span class="form-section-number">
+                                03
+                            </span>
+
+                            <strong>
+                                Historical Signal
+                            </strong>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         </div>
 
                         <div class="field">
+<<<<<<< HEAD
                             <label for="rolling_avg">Recent Average Demand</label>
+=======
+
+                            <label for="rolling_avg">
+                                Recent Average Demand
+                            </label>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                             <input
                                 type="number"
                                 step="any"
@@ -356,20 +2208,42 @@
                                 required
                             >
                             <div class="field-note">
+<<<<<<< HEAD
                                 Recent 7-day average consumption value used by the trained model.
+=======
+                                Recent average demand value used by the trained model.
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                             </div>
                         </div>
                     </div>
 
 
+<<<<<<< HEAD
                     <!-- SECTION 04: FOOD ITEM -->
                     <div class="form-section">
                         <div class="form-section-title">
                             <span class="form-section-number">04</span>
                             <strong>Select Food Item</strong>
+=======
+                    <!-- FOOD -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span class="form-section-number">
+                                04
+                            </span>
+
+                            <strong>
+                                Food Item
+                            </strong>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         </div>
 
                         <div class="food-grid">
+
 
                             <div class="food-option">
                                 <input
@@ -470,13 +2344,29 @@
             ========================== -->
             <aside class="panel result-panel">
 
+<<<<<<< HEAD
                 <div class="result-top">
                     <h3>Forecast result</h3>
                     <span class="result-status" id="status">
+=======
+            <aside class="panel result-panel">
+
+                <div class="result-top">
+
+                    <h3>
+                        Forecast result
+                    </h3>
+
+                    <span
+                        class="result-status"
+                        id="status"
+                    >
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         WAITING
                     </span>
                 </div>
 
+<<<<<<< HEAD
                 <!-- EMPTY STATE -->
                 <div class="result-empty" id="resultEmpty">
                     <div>
@@ -485,6 +2375,66 @@
                         <p style="margin-top: 6px; color: var(--neutral-500); font-size: 13px;">
                             Complete the inputs on the left and click Generate Forecast.
                         </p>
+=======
+
+                <!-- EMPTY -->
+
+                <div
+                    class="result-empty"
+                    id="resultEmpty"
+                >
+
+                    <div>
+
+                        <div class="empty-icon">
+                            ◌
+                        </div>
+
+                        <strong>
+                            Your forecast will appear here
+                        </strong>
+
+                        <br>
+
+                        Complete the inputs and generate a forecast.
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT -->
+
+                <div
+                    class="current-result"
+                    id="currentResult"
+                >
+
+                    <div class="forecast-box">
+
+                        <div class="forecast-label">
+                            Expected Demand
+                        </div>
+
+                        <div
+                            class="forecast-number"
+                            id="predictionNumber"
+                        >
+                            --
+                        </div>
+
+                        <div class="forecast-unit">
+                            estimated units
+                        </div>
+
+                        <div
+                            class="forecast-food"
+                            id="resultFood"
+                        >
+                            --
+                        </div>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     </div>
                 </div>
 
@@ -500,12 +2450,49 @@
 
                     <div class="summary">
                         <div class="summary-row">
+<<<<<<< HEAD
                             <span>Date</span>
                             <span id="summaryDate">--</span>
+=======
+
+                            <span>
+                                Date
+                            </span>
+
+                            <span id="summaryDate">
+                                --
+                            </span>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         </div>
                         <div class="summary-row">
+<<<<<<< HEAD
                             <span>Day</span>
                             <span id="summaryDay">--</span>
+=======
+
+                            <span>
+                                Day
+                            </span>
+
+                            <span id="summaryDay">
+                                --
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Weekend
+                            </span>
+
+                            <span id="summaryWeekend">
+                                --
+                            </span>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         </div>
                         <div class="summary-row">
                             <span>Weekend</span>
@@ -522,10 +2509,31 @@
                 <!-- ERROR BOX -->
                 <div class="error-box" id="errorBox"></div>
 
+<<<<<<< HEAD
                 <!-- RECENT FORECASTS HISTORY -->
                 <div class="history">
                     <div class="history-head">
                         <strong>Recent forecasts</strong>
+=======
+                <!-- ERROR -->
+
+                <div
+                    class="error-box"
+                    id="errorBox"
+                ></div>
+
+
+                <!-- HISTORY -->
+
+                <div class="history">
+
+                    <div class="history-head">
+
+                        <strong>
+                            Recent forecasts
+                        </strong>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                         <button
                             type="button"
                             class="clear-history"
@@ -533,6 +2541,7 @@
                         >
                             Clear
                         </button>
+<<<<<<< HEAD
                     </div>
 
                     <div class="history-list" id="historyList">
@@ -540,6 +2549,23 @@
                             No forecasts yet.
                         </div>
                     </div>
+=======
+
+                    </div>
+
+
+                    <div
+                        class="history-list"
+                        id="historyList"
+                    >
+
+                        <div class="history-empty">
+                            No forecasts yet.
+                        </div>
+
+                    </div>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                 </div>
 
             </aside>
@@ -547,12 +2573,26 @@
         </div>
 
 
+<<<<<<< HEAD
         <!-- =========================================================
              MODEL INTELLIGENCE SECTION
         ========================================================= -->
         <section class="model-section" id="model">
 
             <div class="model-copy">
+=======
+        <!-- =========================
+             MODEL
+        ========================== -->
+
+        <section
+            class="model-section"
+            id="model"
+        >
+
+            <div class="model-copy">
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                 <div class="section-tag">
                     Model intelligence
                 </div>
@@ -569,6 +2609,7 @@
                 </p>
 
                 <div class="tech-stack">
+<<<<<<< HEAD
                     <span class="tech">🐍 Python</span>
                     <span class="tech">📊 Pandas</span>
                     <span class="tech">🔵 Scikit-learn</span>
@@ -612,11 +2653,102 @@
                     Evaluation values shown here match the performance metrics
                     calculated from the final model validation set.
                 </p>
+=======
+
+                    <span class="tech">Python</span>
+                    <span class="tech">Pandas</span>
+                    <span class="tech">Scikit-learn</span>
+                    <span class="tech">Random Forest</span>
+                    <span class="tech">Flask</span>
+                    <span class="tech">HTML / CSS / JS</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="performance-card">
+
+                <div class="performance-head">
+
+                    <span>
+                        Model performance
+                    </span>
+
+                    <span class="model-badge">
+                        EVALUATED
+                    </span>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div class="metric-top">
+
+                        <span>
+                            R² Score
+                        </span>
+
+                        <strong>
+                            0.97
+                        </strong>
+
+                    </div>
+
+                    <div class="metric-bar">
+                        <div class="metric-fill"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div class="metric-top">
+
+                        <span>
+                            RMSE
+                        </span>
+
+                        <strong>
+                            Model metric
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div class="metric-top">
+
+                        <span>
+                            MAE
+                        </span>
+
+                        <strong>
+                            Model metric
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <p class="performance-note">
+                    Evaluation values shown here should match the metrics
+                    calculated from the final training notebook.
+                </p>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
             </div>
 
         </section>
 
 
+<<<<<<< HEAD
         <!-- =========================================================
              FEATURES SECTION
         ========================================================= -->
@@ -641,28 +2773,105 @@
                 <div class="feature">
                     <div class="feature-icon">📅</div>
                     <h3>Calendar-aware</h3>
+=======
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section
+            class="features"
+            id="features"
+        >
+
+            <div class="section-intro">
+
+                <div class="section-tag">
+                    Why CanteenIQ
+                </div>
+
+                <h2>
+                    Designed around the actual planning problem.
+                </h2>
+
+                <p>
+                    The interface keeps the prediction process simple while
+                    making the model inputs understandable to the person
+                    actually using the system.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        Calendar-aware
+                    </h3>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     <p>
                         Day, month and weekend status are derived from the
                         selected date automatically.
                     </p>
+<<<<<<< HEAD
                 </div>
 
                 <div class="feature">
                     <div class="feature-icon">🌦️</div>
                     <h3>Weather signals</h3>
+=======
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🌦️
+                    </div>
+
+                    <h3>
+                        Weather signals
+                    </h3>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     <p>
                         Temperature and rainfall are included as demand
                         signals during prediction.
                     </p>
+<<<<<<< HEAD
                 </div>
 
                 <div class="feature">
                     <div class="feature-icon">🍽️</div>
                     <h3>Item-level demand</h3>
+=======
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🍽️
+                    </div>
+
+                    <h3>
+                        Item-level demand
+                    </h3>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     <p>
                         Forecast demand separately for Biryani, Chai, Dosa,
                         Samosa and Sandwich.
                     </p>
+<<<<<<< HEAD
                 </div>
 
                 <div class="feature">
@@ -677,19 +2886,74 @@
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
                     <h3>API inference</h3>
+=======
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Historical context
+                    </h3>
+
+                    <p>
+                        Recent average demand provides a historical signal
+                        to the trained model.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        API inference
+                    </h3>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     <p>
                         The frontend communicates with a Flask REST API for
                         real-time model inference.
                     </p>
+<<<<<<< HEAD
                 </div>
 
                 <div class="feature">
                     <div class="feature-icon">🧠</div>
                     <h3>ML-powered planning</h3>
+=======
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        ML-powered planning
+                    </h3>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                     <p>
                         A trained regression model converts the supplied
                         signals into an estimated food demand value.
                     </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
                 </div>
 
             </div>
@@ -697,6 +2961,7 @@
         </section>
 
 
+<<<<<<< HEAD
         <!-- =========================================================
              SHORT ABOUT PREVIEW SECTION
         ========================================================= -->
@@ -729,11 +2994,188 @@
                 </div>
 
             </div>
+=======
+        <!-- =========================
+             ABOUT + TEAM
+        ========================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="about-box">
+
+                <div class="about-text">
+
+                    <div class="section-tag">
+                        About the project
+                    </div>
+
+                    <h2>
+                        From prediction to preparation.
+                    </h2>
+
+                    <p>
+                        CanteenIQ is an end-to-end machine learning project
+                        built to explore how historical demand, weather,
+                        calendar patterns and special-day conditions can
+                        support smarter food preparation in a college
+                        canteen.
+                    </p>
+
+                </div>
+
+
+                <div class="team-title">
+                    Project Team
+                </div>
+
+
+                <div class="team-grid">
+
+
+                    <!-- SHREYA -->
+
+                    <div class="team-card">
+
+                        <div class="team-avatar">
+                            SP
+                        </div>
+
+                        <h3>
+                            Shreya
+                        </h3>
+
+                        <p>
+                            Team Member
+                        </p>
+
+                        <a
+                            href="https://github.com/shreyapandey826"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+
+                    <!-- RAVI -->
+
+                    <div class="team-card">
+
+                        <div class="team-avatar">
+                            RD
+                        </div>
+
+                        <h3>
+                            Ravi
+                        </h3>
+
+                        <p>
+                            Team Member
+                        </p>
+
+                        <a
+                            href="https://github.com/ravidhakar712"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+
+                    <!-- RASHIL -->
+
+                    <div class="team-card">
+
+                        <div class="team-avatar">
+                            R
+                        </div>
+
+                        <h3>
+                            Rashil
+                        </h3>
+
+                        <p>
+                            Team Member
+                        </p>
+
+                        <a
+                            href="https://github.com/rashil2005"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+
+                    <!-- MANSI -->
+
+                    <div class="team-card disabled">
+
+                        <div class="team-avatar">
+                            M
+                        </div>
+
+                        <h3>
+                            Mansi
+                        </h3>
+
+                        <p>
+                            Team Member · GitHub coming soon
+                        </p>
+
+                        <a href="#">
+                            Profile coming soon
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT REPOSITORY -->
+
+                <div class="repo-box">
+
+                    <div>
+
+                        <strong>
+                            CanteenIQ — Project Repository
+                        </strong>
+
+                        <span>
+                            Source code, machine learning model and project files
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/shreyapandey826/samatrix_hackathon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Repository ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
         </section>
 
     </main>
 
 
+<<<<<<< HEAD
     <!-- =========================================================
          PREMIUM FOOTER
     ========================================================= -->
@@ -756,6 +3198,979 @@
 
     <!-- JAVASCRIPT INTEGRATION -->
     <script src="script.js"></script>
+=======
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                CanteenIQ
+
+                <span>
+                    Demand Intelligence · Team Creatives
+                </span>
+
+            </div>
+
+            <div class="footer-right">
+                Rashil · Mansi · Shreya · Ravi
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /*
+        =====================================================
+        API CONFIGURATION
+        =====================================================
+
+        LOCAL:
+        http://127.0.0.1:5000/predict
+
+        LIVE:
+        Put your Render backend URL here.
+
+        Example:
+        https://your-backend-name.onrender.com/predict
+        =====================================================
+        */
+
+        const LOCAL_API_URL =
+            "https://canteen-demand-prediction.onrender.com/";
+
+        /*
+        IMPORTANT:
+        Replace the empty string below with your Render
+        backend /predict URL when backend is deployed.
+
+        Example:
+        const LIVE_API_URL =
+            "https://canteen-backend.onrender.com/predict";
+        */
+
+        const LIVE_API_URL = "";
+
+
+        /*
+        Automatically choose API.
+        Localhost -> Flask local server
+        Vercel -> Render backend
+        */
+
+        const API_URL =
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1"
+                ? LOCAL_API_URL
+                : LIVE_API_URL;
+
+
+        /* =========================
+           ELEMENTS
+        ========================== */
+
+        const form =
+            document.getElementById("predictionForm");
+
+        const dateInput =
+            document.getElementById("date");
+
+        const dayOfWeek =
+            document.getElementById("day_of_week");
+
+        const monthInput =
+            document.getElementById("month");
+
+        const weekendStatus =
+            document.getElementById("weekendStatus");
+
+        const weekendText =
+            document.getElementById("weekendText");
+
+        const predictButton =
+            document.getElementById("predictButton");
+
+        const resetButton =
+            document.getElementById("resetButton");
+
+        const status =
+            document.getElementById("status");
+
+        const resultEmpty =
+            document.getElementById("resultEmpty");
+
+        const currentResult =
+            document.getElementById("currentResult");
+
+        const predictionNumber =
+            document.getElementById("predictionNumber");
+
+        const resultFood =
+            document.getElementById("resultFood");
+
+        const errorBox =
+            document.getElementById("errorBox");
+
+        const historyList =
+            document.getElementById("historyList");
+
+        const clearHistoryButton =
+            document.getElementById("clearHistoryButton");
+
+        const heroNumber =
+            document.getElementById("heroNumber");
+
+        const heroFood =
+            document.getElementById("heroFood");
+
+        const heroDate =
+            document.getElementById("heroDate");
+
+
+        /* =========================
+           DEFAULT DATE
+        ========================== */
+
+        function setDefaultDate() {
+
+            const today =
+                new Date();
+
+            const year =
+                today.getFullYear();
+
+            const month =
+                String(
+                    today.getMonth() + 1
+                ).padStart(2, "0");
+
+            const day =
+                String(
+                    today.getDate()
+                ).padStart(2, "0");
+
+            dateInput.value =
+                `${year}-${month}-${day}`;
+
+            updateDateInformation();
+        }
+
+
+        /* =========================
+           DATE INFORMATION
+        ========================== */
+
+        function updateDateInformation() {
+
+            if (!dateInput.value) {
+                return;
+            }
+
+            const selectedDate =
+                new Date(
+                    dateInput.value +
+                    "T00:00:00"
+                );
+
+            const jsDay =
+                selectedDate.getDay();
+
+            /*
+            JavaScript:
+            Sunday = 0
+            Monday = 1
+
+            Model:
+            Monday = 0
+            Sunday = 6
+            */
+
+            const modelDay =
+                jsDay === 0
+                    ? 6
+                    : jsDay - 1;
+
+            dayOfWeek.value =
+                modelDay;
+
+
+            const month =
+                selectedDate.getMonth() + 1;
+
+            monthInput.value =
+                month;
+
+
+            const isWeekend =
+                jsDay === 0 ||
+                jsDay === 6;
+
+
+            if (isWeekend) {
+
+                weekendText.innerText =
+                    "Weekend";
+
+                weekendStatus.classList.add(
+                    "is-weekend"
+                );
+
+            } else {
+
+                weekendText.innerText =
+                    "Weekday";
+
+                weekendStatus.classList.remove(
+                    "is-weekend"
+                );
+
+            }
+        }
+
+
+        /* =========================
+           FORMAT DATE
+        ========================== */
+
+        function formatDate(dateString) {
+
+            if (!dateString) {
+                return "--";
+            }
+
+            const date =
+                new Date(
+                    dateString +
+                    "T00:00:00"
+                );
+
+            return date.toLocaleDateString(
+                "en-IN",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+        }
+
+
+        /* =========================
+           SELECT FOOD
+        ========================== */
+
+        function getSelectedFood() {
+
+            const selected =
+                document.querySelector(
+                    'input[name="foodItem"]:checked'
+                );
+
+            return selected
+                ? selected.value
+                : null;
+        }
+
+
+        /* =========================
+           RADIO VALUE
+        ========================== */
+
+        function getRadioValue(name) {
+
+            const selected =
+                document.querySelector(
+                    `input[name="${name}"]:checked`
+                );
+
+            return selected
+                ? Number(selected.value)
+                : 0;
+        }
+
+
+        /* =========================
+           CONDITIONS
+        ========================== */
+
+        function getConditions() {
+
+            const exam =
+                getRadioValue("exam") === 1;
+
+            const festival =
+                getRadioValue("festival") === 1;
+
+            const isWeekend =
+                weekendStatus.classList.contains(
+                    "is-weekend"
+                );
+
+
+            if (exam && festival) {
+                return "Exam + Festival";
+            }
+
+            if (exam) {
+                return "Exam Day";
+            }
+
+            if (festival) {
+                return "Festival";
+            }
+
+            if (isWeekend) {
+                return "Weekend";
+            }
+
+            return "Normal Day";
+        }
+
+
+        /* =========================
+           HISTORY
+        ========================== */
+
+        function getHistory() {
+
+            try {
+
+                const saved =
+                    localStorage.getItem(
+                        "canteenPredictionHistory"
+                    );
+
+                return saved
+                    ? JSON.parse(saved)
+                    : [];
+
+            } catch (error) {
+
+                return [];
+            }
+        }
+
+
+        function saveHistory(history) {
+
+            localStorage.setItem(
+                "canteenPredictionHistory",
+                JSON.stringify(history)
+            );
+        }
+
+
+        function addToHistory(data) {
+
+            let history =
+                getHistory();
+
+            history.unshift(data);
+
+            /*
+            Keep latest 4
+            */
+
+            history =
+                history.slice(0, 4);
+
+            saveHistory(history);
+
+            renderHistory();
+        }
+
+
+        function renderHistory() {
+
+            const history =
+                getHistory();
+
+
+            if (history.length === 0) {
+
+                historyList.innerHTML = `
+                    <div class="history-empty">
+                        No forecasts yet.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            historyList.innerHTML =
+                history.map(
+                    (item, index) => {
+
+                        return `
+                            <div class="history-item">
+
+                                <div class="history-top">
+
+                                    <div class="history-food">
+                                        ${index + 1}. ${item.food}
+                                    </div>
+
+                                    <div class="history-demand">
+                                        ${Number(item.prediction).toFixed(2)}
+                                    </div>
+
+                                </div>
+
+                                <div class="history-bottom">
+
+                                    <span>
+                                        ${item.date}
+                                    </span>
+
+                                    <span>
+                                        ${item.conditions}
+                                    </span>
+
+                                </div>
+
+                            </div>
+                        `;
+                    }
+                ).join("");
+        }
+
+
+        /* =========================
+           SHOW RESULT
+        ========================== */
+
+        function showResult(
+            prediction,
+            food,
+            date
+        ) {
+
+            const number =
+                Number(prediction);
+
+            const conditions =
+                getConditions();
+
+            const isWeekend =
+                weekendStatus.classList.contains(
+                    "is-weekend"
+                );
+
+
+            resultEmpty.style.display =
+                "none";
+
+            currentResult.style.display =
+                "block";
+
+
+            predictionNumber.innerText =
+                number.toFixed(2);
+
+            resultFood.innerText =
+                food;
+
+
+            document.getElementById(
+                "summaryDate"
+            ).innerText =
+                formatDate(date);
+
+
+            document.getElementById(
+                "summaryDay"
+            ).innerText =
+                dayOfWeek.options[
+                    dayOfWeek.selectedIndex
+                ].text;
+
+
+            document.getElementById(
+                "summaryWeekend"
+            ).innerText =
+                isWeekend
+                    ? "Weekend"
+                    : "Weekday";
+
+
+            document.getElementById(
+                "summaryConditions"
+            ).innerText =
+                conditions;
+
+
+            /* HERO */
+
+            heroNumber.innerText =
+                number.toFixed(1);
+
+            heroFood.innerText =
+                food;
+
+            heroDate.innerText =
+                formatDate(date);
+        }
+
+
+        /* =========================
+           RESET
+        ========================== */
+
+        resetButton.addEventListener(
+            "click",
+            function () {
+
+                form.reset();
+
+                setDefaultDate();
+
+                resultEmpty.style.display =
+                    "grid";
+
+                currentResult.style.display =
+                    "none";
+
+                errorBox.style.display =
+                    "none";
+
+                status.innerText =
+                    "WAITING";
+
+                status.className =
+                    "result-status";
+
+                heroNumber.innerText =
+                    "--";
+
+                heroFood.innerText =
+                    "Awaiting prediction";
+
+                heroDate.innerText =
+                    "Select inputs below";
+            }
+        );
+
+
+        /* =========================
+           CLEAR HISTORY
+        ========================== */
+
+        clearHistoryButton.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    getHistory().length === 0
+                ) {
+                    return;
+                }
+
+
+                if (
+                    confirm(
+                        "Clear recent forecasts?"
+                    )
+                ) {
+
+                    localStorage.removeItem(
+                        "canteenPredictionHistory"
+                    );
+
+                    renderHistory();
+                }
+            }
+        );
+
+
+        /* =========================
+           DATE CHANGE
+        ========================== */
+
+        dateInput.addEventListener(
+            "change",
+            updateDateInformation
+        );
+
+
+        /* =========================
+           FORM SUBMIT
+        ========================== */
+
+        form.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                const selectedFood =
+                    getSelectedFood();
+
+
+                if (!selectedFood) {
+
+                    alert(
+                        "Please select a food item."
+                    );
+
+                    return;
+                }
+
+
+                /*
+                If live API URL is missing,
+                stop before fetch.
+                */
+
+                if (!API_URL) {
+
+                    errorBox.style.display =
+                        "block";
+
+                    errorBox.innerText =
+                        "Live backend URL is not configured yet. Please connect the Flask backend deployed on Render.";
+
+                    status.innerText =
+                        "API NOT SET";
+
+                    status.className =
+                        "result-status";
+
+                    return;
+                }
+
+
+                /* =========================
+                   ONE-HOT ENCODING
+                ========================== */
+
+                let item_Biryani = 0;
+                let item_Chai = 0;
+                let item_Dosa = 0;
+                let item_Samosa = 0;
+                let item_Sandwich = 0;
+
+
+                if (
+                    selectedFood === "Biryani"
+                ) {
+                    item_Biryani = 1;
+                }
+
+
+                if (
+                    selectedFood === "Chai"
+                ) {
+                    item_Chai = 1;
+                }
+
+
+                if (
+                    selectedFood === "Dosa"
+                ) {
+                    item_Dosa = 1;
+                }
+
+
+                if (
+                    selectedFood === "Samosa"
+                ) {
+                    item_Samosa = 1;
+                }
+
+
+                if (
+                    selectedFood === "Sandwich"
+                ) {
+                    item_Sandwich = 1;
+                }
+
+
+                /* =========================
+                   WEEKEND
+                ========================== */
+
+                const selectedDate =
+                    new Date(
+                        dateInput.value +
+                        "T00:00:00"
+                    );
+
+                const jsDay =
+                    selectedDate.getDay();
+
+                const selectedWeekend =
+                    (
+                        jsDay === 0 ||
+                        jsDay === 6
+                    )
+                        ? 1
+                        : 0;
+
+
+                /* =========================
+                   API PAYLOAD
+                ========================== */
+
+                const data = {
+
+                    is_weekend:
+                        selectedWeekend,
+
+                    is_exam:
+                        getRadioValue("exam"),
+
+                    is_festival:
+                        getRadioValue("festival"),
+
+                    temperature:
+                        Number(
+                            document.getElementById(
+                                "temperature"
+                            ).value
+                        ),
+
+                    rainfall:
+                        Number(
+                            document.getElementById(
+                                "rainfall"
+                            ).value
+                        ),
+
+                    day_of_week:
+                        Number(
+                            dayOfWeek.value
+                        ),
+
+                    month:
+                        Number(
+                            monthInput.value
+                        ),
+
+                    rolling_avg:
+                        Number(
+                            document.getElementById(
+                                "rolling_avg"
+                            ).value
+                        ),
+
+                    item_Biryani:
+                        item_Biryani,
+
+                    item_Chai:
+                        item_Chai,
+
+                    item_Dosa:
+                        item_Dosa,
+
+                    item_Samosa:
+                        item_Samosa,
+
+                    item_Sandwich:
+                        item_Sandwich
+                };
+
+
+                /* =========================
+                   LOADING
+                ========================== */
+
+                predictButton.disabled =
+                    true;
+
+                predictButton.innerText =
+                    "Generating forecast...";
+
+                status.innerText =
+                    "PROCESSING";
+
+                status.className =
+                    "result-status";
+
+                errorBox.style.display =
+                    "none";
+
+
+                /* =========================
+                   API CALL
+                ========================== */
+
+                try {
+
+                    const response =
+                        await fetch(
+                            API_URL,
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body:
+                                    JSON.stringify(data)
+                            }
+                        );
+
+
+                    /*
+                    Read response safely.
+                    This prevents:
+                    Unexpected token '<'
+                    when server sends HTML.
+                    */
+
+                    const responseText =
+                        await response.text();
+
+                    let result;
+
+                    try {
+
+                        result =
+                            JSON.parse(
+                                responseText
+                            );
+
+                    } catch (jsonError) {
+
+                        throw new Error(
+                            "Backend returned an invalid response. Check the Flask/Render API."
+                        );
+                    }
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            result.error ||
+                            "Prediction request failed."
+                        );
+                    }
+
+
+                    if (
+                        result.prediction === undefined ||
+                        result.prediction === null
+                    ) {
+
+                        throw new Error(
+                            "Prediction value was not returned by the backend."
+                        );
+                    }
+
+
+                    /* =========================
+                       SHOW RESULT
+                    ========================== */
+
+                    showResult(
+                        result.prediction,
+                        selectedFood,
+                        dateInput.value
+                    );
+
+
+                    /* =========================
+                       SAVE HISTORY
+                    ========================== */
+
+                    addToHistory({
+
+                        prediction:
+                            Number(
+                                result.prediction
+                            ),
+
+                        food:
+                            selectedFood,
+
+                        date:
+                            formatDate(
+                                dateInput.value
+                            ),
+
+                        conditions:
+                            getConditions(),
+
+                        timestamp:
+                            new Date().toISOString()
+
+                    });
+
+
+                    /* =========================
+                       SUCCESS
+                    ========================== */
+
+                    status.innerText =
+                        "COMPLETED";
+
+                    status.className =
+                        "result-status success";
+
+                }
+
+
+                catch (error) {
+
+                    console.error(
+                        "Prediction Error:",
+                        error
+                    );
+
+                    errorBox.style.display =
+                        "block";
+
+                    errorBox.innerText =
+                        "Unable to generate forecast. " +
+                        error.message;
+
+                    status.innerText =
+                        "ERROR";
+
+                    status.className =
+                        "result-status";
+                }
+
+
+                finally {
+
+                    predictButton.disabled =
+                        false;
+
+                    predictButton.innerText =
+                        "Generate Forecast →";
+                }
+
+            }
+        );
+
+
+        /* =========================
+           INITIALIZE
+        ========================== */
+
+        setDefaultDate();
+
+        renderHistory();
+
+    </script>
+>>>>>>> 565d80359ad3d86418e0cbcbf909f5a01c231ec7
 
 </body>
 
